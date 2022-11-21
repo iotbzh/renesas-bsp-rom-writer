@@ -1,0 +1,26 @@
+============== -*- outline -*- ==============
+
+   Renesas V3H Condor BSP ROM Writer
+
+2022/07/27	Kuninori Morimoto <kuninori.morimoto.gx@renesas.com>
+2022/11/21	Pierre   Marzin   <pierre.marzin@iot.bzh>
+=============================================
+
+-------------------------------
+* How to get ROM ?
+-------------------------------
+
+	Please Contact to [Renesas Sales team] or
+	[Renesas appointed store Sales team]
+
+-------------------------------
+* Serial connection
+-------------------------------
+
+	[Host PC] <--> [board CN10] (/dev/ttyUSBx)
+
+-------------------------------
+* How to use ?
+-------------------------------
+
+	linux/README
