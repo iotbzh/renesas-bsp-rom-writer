@@ -507,12 +507,12 @@ class board(base):
     def __select_tty(self):
         text = "Your board and PC need to connect\n" + self.tty_connection()
         self.msg(text)
-        self.ask_yn(quit=True)
+        #self.ask_yn(quit=True)
 
         text = "You need to stop minicom or other software\n" +\
                "which is connecting to the board"
         self.msg(text)
-        self.ask_yn(quit=True)
+        #self.ask_yn(quit=True)
 
         text = "Which tty is connected to board ?\n" +\
                "  ex) /dev/ttyUSBx\n\n" +\
@@ -528,7 +528,7 @@ class board(base):
                 self.error("{} is not exist or not tty\n".format(self.__tty) +
                            "Please select like /dev/ttyUSBx", quit=0)
             else:
-                fuser = self.run("fuser -u {} 2>&1".format(self.__tty))
+                fuser = self.run("sudo fuser -u {} 2>&1".format(self.__tty))
                 if (fuser):
                     m = re.match(".*\((.*)\)", fuser)
                     self.error("{} is using {}\n".format(m.group(1), self.__tty) +
@@ -613,7 +613,7 @@ class board(base):
                  "Are you calling this script from there ?\n\n" +\
                  "  > cd ${{{0} ROM dir}}\n".format(self.rom()) +\
                  "  > ${{renesas-bsp-rom-writer}}/board/{}/linux/{}-writer".format(self.board(), self.rom()))
-        self.ask_yn(quit=True)
+        #self.ask_yn(quit=True)
 
     #--------------------
     # confirm_info

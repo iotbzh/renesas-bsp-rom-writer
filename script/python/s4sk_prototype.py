@@ -42,7 +42,7 @@ class board(base.board):
     #--------------------
     def __init__(self, ver="", tty=""):
 
-        super().__init__(soc="s4", rom="sdk", ver=ver, tty=tty)
+        super().__init__(soc="s4", rom="zef", ver=ver, tty=tty)
 
         self.confirm_location()
         self.config_load()
@@ -79,11 +79,11 @@ class rom_write_guide(base.guide):
 
         # power off
         self.power("OFF")
-        self.ask_yn()
+        #self.ask_yn()
 
         # indicate dip-switch update mode
         sw.print_msg_update()
-        self.ask_yn()
+        #self.ask_yn()
 
         self.power("ON")
         self.expect("please send !")
@@ -96,11 +96,11 @@ class rom_write_guide(base.guide):
 
         # power off
         self.power("OFF")
-        self.ask_yn()
+        #self.ask_yn()
 
         # indicate dip-switch normal mode
         sw.print_msg_normal()
-        self.ask_yn()
+        #self.ask_yn()
 
 #====================================
 #

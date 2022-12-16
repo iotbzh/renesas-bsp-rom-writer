@@ -1,0 +1,5 @@
+num_addr_map = 1
+strdim addr_map num_addr_map
+addr_map[0]  = "E2100000,0500000,zephyr.srec"
+
+mot_file = "ICUMX_Flash_writer_SCIF_DUMMY_CERT_EB203000_S4.mot"
